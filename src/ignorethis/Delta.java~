@@ -1,0 +1,60 @@
+package ignorethis;
+
+import java.awt.Point;
+
+import yourwork.Mover;
+
+public class Delta
+{
+	private int x, y;
+	private double vx, vy;
+
+	public Delta(int x, int y, double vx, double vy)
+	{
+		x = x;
+		y = y;
+		vx = vx; 
+		vy = vy;
+	}
+
+	public void applyDelta(Mover m)
+	{
+		m.getCenter().translate(x,y);
+		Point oldVelocity = m.getVelocity();
+		Point newVelocity = new Point(oldVelocity.x + vx, oldVelocity.y + vy);
+		m.setVelocity(newVelocity.x, newVelocity.y);
+	}
+
+	public void scale(double scale)
+	{
+		x *= scale;
+		y *= scale;
+		vx *= scale;
+		vy *= scale;
+	}
+
+	public Delta add(Delta d)
+	{
+		x += d.getx();
+		y += d.gety();
+		vx += d.getvx();
+		vy += d.getvy();
+		return this;
+	}
+	
+	public int getx(){
+		return x;
+	}
+	
+	public int gety(){
+		return y;
+	}
+	
+	public int getx(){
+		return x;
+	}
+	
+	public int getx(){
+		return x;
+	}
+}

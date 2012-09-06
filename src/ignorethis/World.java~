@@ -1,0 +1,15 @@
+public class Transform {
+	private Map<Mover, Delta> Deltas;
+	public  
+	public void applyTransform(List movers, double scale)
+	{
+		for (Mover m : movers)
+		{
+			if(!Deltas.contains(m)) 
+				continue;
+			delta = Deltas.get(m);
+			delta.applyDelta(m);
+			m.applyForce(Deltas.get(m));
+		}
+	}
+}

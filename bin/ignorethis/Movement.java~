@@ -1,0 +1,24 @@
+public class Movement
+{
+	int x, y;
+	private double vx, vy;
+	public Movement(int x, int y, double vx, double vy)
+	{
+		x = x;
+		y = y;
+		vx = vx;
+		vy = vy;
+	}
+	public void restoreState(Mover m)
+	{
+		m.setCenter(x,y);
+		m.setVelocity(vx,vy);
+	}
+
+	public void createDelta(Mover m)
+	{
+		Point newCenter = m.getCenter();
+		Point newVelocity = m.getVelocity();
+		return new Delta(newCenter.x - x, newCenter.y - y, newVelocity.x - vx, newVelocity.y - vy);
+	}
+}

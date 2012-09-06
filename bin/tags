@@ -1,0 +1,124 @@
+!_TAG_FILE_FORMAT	2	/extended format; --format=1 will not append ;" to lines/
+!_TAG_FILE_SORTED	1	/0=unsorted, 1=sorted, 2=foldcase/
+!_TAG_PROGRAM_AUTHOR	Darren Hiebert	/dhiebert@users.sourceforge.net/
+!_TAG_PROGRAM_NAME	Exuberant Ctags	//
+!_TAG_PROGRAM_URL	http://ctags.sourceforge.net	/official site/
+!_TAG_PROGRAM_VERSION	5.8	//
+Applet	.\Applet.java	/^public class Applet extends JApplet$/;"	c
+ButtonPanel	.\ignorethis\ButtonPanel.java	/^    public ButtonPanel (Canvas target)$/;"	m	class:ButtonPanel
+ButtonPanel	.\ignorethis\ButtonPanel.java	/^public class ButtonPanel extends JPanel$/;"	c
+Canvas	.\ignorethis\Canvas.java	/^    public Canvas (Dimension size)$/;"	m	class:Canvas
+Canvas	.\ignorethis\Canvas.java	/^public class Canvas extends JComponent$/;"	c
+DEFAULT_DELAY	.\Applet.java	/^    public static final int DEFAULT_DELAY = 1000 \/ 25;  \/\/ in milliseconds$/;"	f	class:Applet
+Factory	.\ignorethis\Factory.java	/^    public Factory (String name)$/;"	m	class:Factory
+Factory	.\ignorethis\Factory.java	/^public abstract class Factory$/;"	c
+Force	.\yourwork\Force.java	/^    public Force ()$/;"	m	class:Force
+Force	.\yourwork\Force.java	/^    public Force (Force other)$/;"	m	class:Force
+Force	.\yourwork\Force.java	/^    public Force (Point source, Point target)$/;"	m	class:Force
+Force	.\yourwork\Force.java	/^    public Force (double angle, double magnitude)$/;"	m	class:Force
+Force	.\yourwork\Force.java	/^public class Force$/;"	c
+GRAVITY	.\yourwork\Mass.java	/^    private Force GRAVITY = new Force(90, 1);$/;"	f	class:Mass	file:
+Image	.\ignorethis\Image.java	/^    public Image (Point center,$/;"	m	class:Image
+Image	.\ignorethis\Image.java	/^public class Image extends Mover$/;"	c
+Main	.\Main.java	/^public class Main$/;"	c
+Mass	.\yourwork\Mass.java	/^    public Mass (Point center, Dimension size, Color color, double mass)$/;"	m	class:Mass
+Mass	.\yourwork\Mass.java	/^public class Mass extends Image$/;"	c
+Mover	.\yourwork\Mover.java	/^    public Mover (Point center, Dimension size, Point velocity, Color color)$/;"	m	class:Mover
+Mover	.\yourwork\Mover.java	/^public abstract class Mover$/;"	c
+SIZE	.\Main.java	/^    public static final Dimension SIZE = new Dimension(800, 600);$/;"	f	class:Main
+Spring	.\yourwork\Spring.java	/^    public Spring (Mass start, Mass end, double length, double kVal)$/;"	m	class:Spring
+Spring	.\yourwork\Spring.java	/^public class Spring extends Image$/;"	c
+SpringFactory	.\yourwork\SpringFactory.java	/^    public SpringFactory ()$/;"	m	class:SpringFactory
+SpringFactory	.\yourwork\SpringFactory.java	/^public class SpringFactory extends Factory$/;"	c
+TITLE	.\Main.java	/^    public static final String TITLE = "Springies!";$/;"	f	class:Main
+add	.\ignorethis\ButtonPanel.java	/^    public void add (final Factory factory)$/;"	m	class:ButtonPanel
+add	.\ignorethis\Canvas.java	/^    public void add (Mover shape) $/;"	m	class:Canvas
+add	.\yourwork\Force.java	/^    public void add (Force other)$/;"	m	class:Force
+angleBetween	.\yourwork\Force.java	/^    public static double angleBetween (Point p1, Point p2)$/;"	m	class:Force
+angleBetween	.\yourwork\Force.java	/^    public static double angleBetween (double dx, double dy)$/;"	m	class:Force
+applyForce	.\yourwork\Mass.java	/^    public void applyForce (Force f)$/;"	m	class:Mass
+average	.\yourwork\Force.java	/^    public Force average (Force other)$/;"	m	class:Force
+clear	.\ignorethis\Canvas.java	/^    public void clear ()$/;"	m	class:Canvas
+createMovers	.\ignorethis\Factory.java	/^    public abstract void createMovers (Canvas target);$/;"	m	class:Factory
+createMovers	.\yourwork\SpringFactory.java	/^    public void createMovers (Canvas canvas)$/;"	m	class:SpringFactory
+difference	.\yourwork\Force.java	/^    public void difference (Force other)$/;"	m	class:Force
+distanceBetween	.\yourwork\Force.java	/^    public static double distanceBetween (Point p1, Point p2)$/;"	m	class:Force
+distanceBetween	.\yourwork\Force.java	/^    public static double distanceBetween (double dx, double dy)$/;"	m	class:Force
+equals	.\yourwork\Force.java	/^    public boolean equals (Object force)$/;"	m	class:Force
+getAngle	.\ignorethis\Image.java	/^    public double getAngle ()$/;"	m	class:Image
+getAngleBetween	.\yourwork\Force.java	/^    public double getAngleBetween (Force other)$/;"	m	class:Force
+getBottom	.\yourwork\Mover.java	/^    public int getBottom ()$/;"	m	class:Mover
+getCenter	.\yourwork\Mover.java	/^    public Point getCenter ()$/;"	m	class:Mover
+getColor	.\yourwork\Mover.java	/^    public Color getColor ()$/;"	m	class:Mover
+getDirection	.\yourwork\Force.java	/^    public double getDirection ()$/;"	m	class:Force
+getLeft	.\yourwork\Mover.java	/^    public int getLeft ()$/;"	m	class:Mover
+getMagnitude	.\yourwork\Force.java	/^    public double getMagnitude ()$/;"	m	class:Force
+getName	.\ignorethis\Factory.java	/^    public String getName ()$/;"	m	class:Factory
+getRelativeMagnitude	.\yourwork\Force.java	/^    public double getRelativeMagnitude (Force other)$/;"	m	class:Force
+getRight	.\yourwork\Mover.java	/^    public int getRight ()$/;"	m	class:Mover
+getSize	.\yourwork\Mover.java	/^    public Dimension getSize ()$/;"	m	class:Mover
+getTop	.\yourwork\Mover.java	/^    public int getTop ()$/;"	m	class:Mover
+getVelocity	.\yourwork\Mover.java	/^    public Point getVelocity ()$/;"	m	class:Mover
+getXChange	.\yourwork\Force.java	/^    public double getXChange ()$/;"	m	class:Force
+getYChange	.\yourwork\Force.java	/^    public double getYChange ()$/;"	m	class:Force
+ignorethis	.\ignorethis\ButtonPanel.java	/^package ignorethis;$/;"	p
+ignorethis	.\ignorethis\Canvas.java	/^package ignorethis;$/;"	p
+ignorethis	.\ignorethis\Factory.java	/^package ignorethis;$/;"	p
+ignorethis	.\ignorethis\Image.java	/^package ignorethis;$/;"	p
+init	.\Applet.java	/^    public void init ()$/;"	m	class:Applet
+init	.\Applet.java	/^    public void init (Dimension size)$/;"	m	class:Applet
+main	.\Main.java	/^    public static void main (String args[])$/;"	m	class:Main
+myAngle	.\ignorethis\Image.java	/^    private double myAngle;$/;"	f	class:Image	file:
+myAngle	.\yourwork\Force.java	/^    private double myAngle;      \/\/ in degrees$/;"	f	class:Force	file:
+myCenter	.\yourwork\Mover.java	/^    private Point myCenter;$/;"	f	class:Mover	file:
+myColor	.\yourwork\Mover.java	/^    private Color myColor;$/;"	f	class:Mover	file:
+myCurrent	.\ignorethis\Canvas.java	/^    private Mover myCurrent;$/;"	f	class:Canvas	file:
+myDisplay	.\Applet.java	/^    private Canvas myDisplay;$/;"	f	class:Applet	file:
+myEnd	.\yourwork\Spring.java	/^    private Mass myEnd;$/;"	f	class:Spring	file:
+myForce	.\yourwork\Mass.java	/^    private Force myForce;$/;"	f	class:Mass	file:
+myGenerator	.\ignorethis\Canvas.java	/^    private Random myGenerator;$/;"	f	class:Canvas	file:
+myImage	.\ignorethis\Image.java	/^    private java.awt.Image myImage;$/;"	f	class:Image	file:
+myIterator	.\ignorethis\Canvas.java	/^    private ListIterator<Mover> myIterator;$/;"	f	class:Canvas	file:
+myK	.\yourwork\Spring.java	/^    private double myK;$/;"	f	class:Spring	file:
+myLength	.\yourwork\Spring.java	/^    private double myLength;$/;"	f	class:Spring	file:
+myMagnitude	.\yourwork\Force.java	/^    private double myMagnitude;  \/\/ in pixels$/;"	f	class:Force	file:
+myMass	.\yourwork\Mass.java	/^    private double myMass;$/;"	f	class:Mass	file:
+myMovers	.\ignorethis\Canvas.java	/^    private List<Mover> myMovers;$/;"	f	class:Canvas	file:
+myMoversToRemove	.\ignorethis\Canvas.java	/^    private List<Mover> myMoversToRemove;$/;"	f	class:Canvas	file:
+myName	.\ignorethis\Factory.java	/^    private String myName;$/;"	f	class:Factory	file:
+myPreciseVelocity	.\yourwork\Mass.java	/^    private Force myPreciseVelocity;$/;"	f	class:Mass	file:
+mySize	.\yourwork\Mover.java	/^    private Dimension mySize;$/;"	f	class:Mover	file:
+myStart	.\yourwork\Spring.java	/^    private Mass myStart;$/;"	f	class:Spring	file:
+myTimer	.\Applet.java	/^    private Timer myTimer;$/;"	f	class:Applet	file:
+myVelocity	.\yourwork\Mover.java	/^    private Point myVelocity;$/;"	f	class:Mover	file:
+myView	.\ignorethis\ButtonPanel.java	/^    private Canvas myView;$/;"	f	class:ButtonPanel	file:
+negate	.\yourwork\Force.java	/^    public Force negate ()$/;"	m	class:Force
+nextIntInRange	.\ignorethis\Canvas.java	/^    public int nextIntInRange (int min, int max)$/;"	m	class:Canvas
+nextNonZeroIntInRange	.\ignorethis\Canvas.java	/^    public int nextNonZeroIntInRange (int min, int max)$/;"	m	class:Canvas
+paint	.\ignorethis\Image.java	/^    public void paint (Graphics pen)$/;"	m	class:Image
+paint	.\yourwork\Mover.java	/^    public abstract void paint (Graphics pen);$/;"	m	class:Mover
+paintComponent	.\ignorethis\Canvas.java	/^    public void paintComponent (Graphics pen)$/;"	m	class:Canvas
+remove	.\ignorethis\Canvas.java	/^    public void remove (Mover shape)$/;"	m	class:Canvas
+reset	.\yourwork\Force.java	/^    public void reset ()$/;"	m	class:Force
+scale	.\yourwork\Force.java	/^    public void scale (double change)$/;"	m	class:Force
+setAngle	.\ignorethis\Image.java	/^    public void setAngle (double degrees)$/;"	m	class:Image
+setCenter	.\yourwork\Mover.java	/^    public void setCenter (int x, int y)$/;"	m	class:Mover
+setColor	.\yourwork\Mover.java	/^    public void setColor (Color color)$/;"	m	class:Mover
+setDirection	.\yourwork\Force.java	/^    protected void setDirection (double value)$/;"	m	class:Force
+setImage	.\ignorethis\Image.java	/^    public void setImage (String fileName)$/;"	m	class:Image
+setMagnitude	.\yourwork\Force.java	/^    protected void setMagnitude (double value)$/;"	m	class:Force
+setSize	.\yourwork\Mover.java	/^    public void setSize (int width, int height)$/;"	m	class:Mover
+setVelocity	.\yourwork\Mover.java	/^    public void setVelocity (int x, int y)$/;"	m	class:Mover
+start	.\Applet.java	/^    public void start ()$/;"	m	class:Applet
+stop	.\Applet.java	/^    public void stop ()$/;"	m	class:Applet
+toString	.\yourwork\Force.java	/^    public String toString ()$/;"	m	class:Force
+turn	.\yourwork\Force.java	/^    public void turn (double change)$/;"	m	class:Force
+update	.\ignorethis\Canvas.java	/^    public void update ()$/;"	m	class:Canvas
+update	.\yourwork\Mass.java	/^    public void update (Canvas canvas)$/;"	m	class:Mass
+update	.\yourwork\Mover.java	/^    public void update (Canvas canvas)$/;"	m	class:Mover
+update	.\yourwork\Spring.java	/^    public void update (Canvas canvas)$/;"	m	class:Spring
+yourwork	.\yourwork\Force.java	/^package yourwork;$/;"	p
+yourwork	.\yourwork\Mass.java	/^package yourwork;$/;"	p
+yourwork	.\yourwork\Mover.java	/^package yourwork;$/;"	p
+yourwork	.\yourwork\Spring.java	/^package yourwork;$/;"	p
+yourwork	.\yourwork\SpringFactory.java	/^package yourwork;$/;"	p

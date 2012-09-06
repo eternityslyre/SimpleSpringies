@@ -1,0 +1,81 @@
+import java.util.HashMap;
+import java.util.List;
+import java.util.Map;
+
+import yourwork.Mover;
+
+public class Transform {
+	private Map<Mover, Delta> Deltas;
+	private Map<Mover, Movement> Movements;
+	public Transform(List movers)
+	{
+		Movements = new HashMap<Mover, Movement>();
+		Deltas = new HashMap<Mover, Delta>();
+		snapshot(movers);
+	}
+
+	public void combine(Transform t)
+	{
+		t.applyTransform(Deltas);
+	}
+
+	public void snapshot(List<Mover> movers)
+	{
+		for (Mover m : movers)
+		{
+			Movements.put(m,new Movement(m.x, m.y, m.vx, m.vy));
+		}
+	}
+
+	public void diff(List<Mover> movers)
+	{
+		if (Movements == null) snapshot(movers);
+		for(Mover m : movers)
+		{
+			Deltas.insert(m, Movements.get(m).createDelta(m));
+		}
+	}
+
+	public void scale(double scale)
+	{
+		for(Delta d : Deltas)
+		{
+			d.scale(scale);
+		}
+	}
+
+	public void restoreSnapshot(List movers)
+	{
+		for(Mover m : movers)
+		{
+			if(!Movements.contains(m))
+				continue;
+			movement = Movements.get(m);
+			movement.restoreState(m);
+		}
+	}
+
+	public void applyTransform(List movers, double scale)
+	{
+		for (Mover m : movers)
+		{
+			if(!Deltas.contains(m)) 
+				continue;
+			delta = Deltas.get(m);
+			delta.scale(scale);
+			delta.applyDelta(m);
+		}
+	}
+
+	public void applyTransform(Map<Mover, Delta> TargetDeltas)
+	{
+		for (Move m : movers)
+		{
+			if(!Deltas.contains(m)) 
+				continue;
+			Delta original = TargetDeltas.get(m);
+			Delta modified = original.add(Deltas.get(m));
+			TargetDeltas.insert(m, modified);
+		}
+	}
+}
