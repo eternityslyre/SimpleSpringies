@@ -74,13 +74,14 @@ public class Transform {
 
 	public void applyTransform(Map<Mover, Delta> TargetDeltas)
 	{
-		for (Mover m : TargetDeltas.keySet())
+		for (Mover m : Deltas.keySet())
 		{
-			if(!Deltas.containsKey(m)) 
+			if(!TargetDeltas.containsKey(m)) {
+				TargetDeltas.put(m, Deltas.get(m));
 				continue;
+			}
 			Delta original = TargetDeltas.get(m);
-			Delta modified = original.add(Deltas.get(m));
-			TargetDeltas.put(m, modified);
+			original.add(Deltas.get(m));
 		}
 	}
 }

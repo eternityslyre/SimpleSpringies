@@ -33,13 +33,17 @@ public class Delta
 		dvy *= scale;
 	}
 
-	public Delta add(Delta d)
+	public void add(Delta d)
 	{
 		dx += d.getx();
 		dy += d.gety();
 		dvx += d.getvx();
 		dvy += d.getvy();
-		return this;
+	}
+	
+	public String toString()
+	{
+		return "["+dx+", "+dy+", "+dvx+", "+dvy+"]";
 	}
 	
 	public int getx(){

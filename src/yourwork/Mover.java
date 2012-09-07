@@ -87,6 +87,7 @@ public abstract class Mover
     public void setCenter (int x, int y)
     {
         myCenter = new Point(x, y);
+        myPreciseCenter = new Point2D.Double(x, y);
     }
 
     
@@ -95,7 +96,7 @@ public abstract class Mover
      */
     public int getLeft ()
     {
-        return (int)getCenter().x - getSize().width / 2;
+        return getCenter().x - getSize().width / 2;
     }
 
     
@@ -104,7 +105,7 @@ public abstract class Mover
      */
     public int getTop ()
     {
-        return (int)getCenter().y - getSize().height / 2;
+        return getCenter().y - getSize().height / 2;
     }
 
 
@@ -113,7 +114,7 @@ public abstract class Mover
      */
     public int getRight ()
     {
-        return (int)getCenter().x + getSize().width / 2;
+        return getCenter().x + getSize().width / 2;
     }
 
 
@@ -124,7 +125,7 @@ public abstract class Mover
      */
     public int getBottom ()
     {
-        return (int)getCenter().y + getSize().height / 2;
+        return getCenter().y + getSize().height / 2;
     }
     
 

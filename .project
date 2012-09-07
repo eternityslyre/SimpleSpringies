@@ -16,6 +16,11 @@
 	</natures>
 	<linkedResources>
 		<link>
+			<name>SimpleSpringies</name>
+			<type>2</type>
+			<location>D:/My Documents/Workspace/SimpleSpringies/src</location>
+		</link>
+		<link>
 			<name>src</name>
 			<type>2</type>
 			<location>D:/Download/springs_simple/springs_simple/src</location>

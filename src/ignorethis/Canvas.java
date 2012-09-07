@@ -116,12 +116,29 @@ public class Canvas extends JComponent
     {
         // animate each mover, taking care to add or remove new ones appropriately
         // clear out updates made during animation
-    	RungeKuttaUpdate(1);
+    	RungeKuttaUpdate(10);
+    	//TestUpdate(1);
+    	//EulerUpdate();
         for (Mover current : myMoversToRemove)
         {
             myMovers.remove(current);
         }
         myMoversToRemove.clear();
+    }
+    
+    private void TestUpdate(double t)
+    {
+		Transform initialState = new Transform(myMovers);
+		Transform finalState = new Transform(myMovers);
+		
+		Transform k1 = new Transform(myMovers);
+		updateMovers(t);
+		//initialState.diff(myMovers);
+		k1.diff(myMovers);
+		k1.scale(0.5);
+		finalState.combine(k1);
+		initialState.restoreSnapshot(myMovers);
+		finalState.applyTransform(myMovers);
     }
 
 	private void RungeKuttaUpdate(double t)
@@ -173,11 +190,21 @@ public class Canvas extends JComponent
 
 	private void updateMovers(double t)
 	{
-        for (Mover myCurrent : myMovers)
+		myIterator = myMovers.listIterator();
+        while (myIterator.hasNext())
         {
             myCurrent = myIterator.next();
-			myCurrent.update(this, t);
+            if (myMoversToRemove.contains(myCurrent))
+            {
+                myMoversToRemove.remove(myCurrent);
+                myIterator.remove();
+            }
+            else
+            {
+                myCurrent.update(this);
+            }
         }
+        myIterator = null;
 	}
 
 	private void EulerUpdate()
