@@ -116,7 +116,7 @@ public class Canvas extends JComponent
     {
         // animate each mover, taking care to add or remove new ones appropriately
         // clear out updates made during animation
-    	RungeKuttaUpdate(10);
+    	RungeKuttaUpdate(0.5);
     	//TestUpdate(1);
     	//EulerUpdate();
         for (Mover current : myMoversToRemove)
@@ -141,7 +141,13 @@ public class Canvas extends JComponent
 		finalState.applyTransform(myMovers);
     }
 
-	private void RungeKuttaUpdate(double t)
+    /**
+     * Updates the world according to the 
+     * Runge-Kutta method.
+     * 
+     * @param timestep The size of the time step taken.
+     */
+	private void RungeKuttaUpdate(double timestep)
 	{
 		Transform initial = new Transform(myMovers);
 		Transform finalState = new Transform(myMovers);
@@ -149,7 +155,7 @@ public class Canvas extends JComponent
 		initial.snapshot(myMovers);	
 		finalState.snapshot(myMovers);
 
-		updateMovers(t);
+		updateMovers(timestep);
 		initial.diff(myMovers);
 		Transform k1 = initial;
 		k1.scale(0.5);
@@ -157,7 +163,7 @@ public class Canvas extends JComponent
 		initial.restoreSnapshot(myMovers);
 		k1.applyTransform(myMovers);
 
-		updateMovers(t/2.0);
+		updateMovers(timestep/2.0);
 		k1.diff(myMovers);
 		Transform k2 = k1;
 		initial.restoreSnapshot(myMovers);
@@ -165,7 +171,7 @@ public class Canvas extends JComponent
 		k2.scale(0.5);
 		k2.applyTransform(myMovers);
 
-		updateMovers(t/2.0);
+		updateMovers(timestep/2.0);
 		k2.diff(myMovers);
 		Transform k3 = k2;
 		finalState.combine(k3);
@@ -183,11 +189,6 @@ public class Canvas extends JComponent
        	finalState.applyTransform(myMovers); 
 	}
 	
-	private void updateMovers()
-	{
-		updateMovers(1);
-	}
-
 	private void updateMovers(double t)
 	{
 		myIterator = myMovers.listIterator();
@@ -206,6 +207,16 @@ public class Canvas extends JComponent
         }
         myIterator = null;
 	}
+
+	/**
+	 * Small helper method which defaults timestep to 1 for 
+	 * EulerUpdates.
+	 */
+	private void updateMovers()
+	{
+		updateMovers(1);
+	}
+
 
 	private void EulerUpdate()
 	{
